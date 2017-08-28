@@ -1,0 +1,89 @@
+<div ng-controller="AngularCtrlHTTP as showCase" class="tableContainer">
+    <h3>Angular Way - HTTP</h3>
+   
+    <table id="resultTable" border="0" cellspacing="0" datatable="ng" class="row-border hover" dt-options="showCase.dtOptions" dt-column-defs="showCase.dtColumnDefs">
+      <thead>
+        <tr>
+          <th>Sold To #</th>
+          <th >Ship To #</th>
+          <th >Ship To Name</th>
+          <th >Customer PO #</th>
+          <th >B2B Order #</th>
+          <th>Sales Order #</th>
+          <th>Order Date</th>
+          <th>Ship Date</th>
+          <th>Cancel Date</th>
+          <th>Order Type</th>
+          <th>PO Type</th>
+          <th>Order Reason</th>
+          <th>Division</th>
+          <th>Sales Rep</th>
+          <th>Factory Direct Shipment</th>
+          <th>Factory PO #</th>
+          <th>Product Division</th>
+          <th>Item</th>
+          <th>Style</th>
+          <th>Description</th>
+          <th>Color</th>
+          <th>Total Order Qty</th>
+          <th>Open Qty</th>
+          <th>Unavailable Qty</th>
+          <th>Allocated Qty</th>
+          <th>Future Qty</th>
+          <th>Invoiced Qty</th>
+          <th>Shipped Qty</th>
+          <th>Delivery Qty</th>
+          <th>Latest Invoice #</th>
+          <th>Total Order Cost</th>
+          <th>Total Cost of Shipment</th>
+          <th>Total Freight Charge</th>
+          <th>Latest ETA</th>
+          <th>Latest Delivery Note Date</th>
+          <th>Latest Warehouse Status</th>
+          <th>Scheduled Factory Ship Date</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr ng-repeat="line in ::showCase.resultLine">
+        <td>{{line.SoldTo}}</td>
+        <td>{{line.ShipTo}}</td>
+        <td>{{line.SoldToName}}</td>
+        <td>{{line.CustomerPO}}</td>
+        <td>{{line.B2BOrder}}</td>
+        <td><a href="">{{line.SalesOrderNumber}}</a></td>
+        <td>{{line.OrderDate}}</td>
+        <td>{{line.ShipDate}}</td>
+        <td>{{line.CancelDate}}</td>
+        <td>{{line.OrderType}}</td>
+        <td>{{line.PurchaseOrderType}}</td>
+        <td>{{line.OrderReason}}</td>
+        <td>{{line.Division}}</td>
+        <td>{{line.Rep}}-{{line.Rep_Name}}</td>
+        <td>{{line.FactoryDirect}}</td>
+        <td>{{line.FactoryPO}}</td>
+        <td>{{line.ProductDivision}}</td>
+        <td>{{line.OrderLine}}</td>
+        <td><a href="">{{line.Material}}</a></td>
+        <td>{{line.Description}}</td>
+        <td>{{line.Color}}</td>
+        <td>{{line.TotalOrderQty}}</td>
+        <td>{{line.OpenQty}}</td>
+        <td>{{line.UnavailableQty}}</td>
+        <td>{{line.AllocatedQty}}</td>
+        <td>{{line.FutureQty}}</td>
+        <td>{{line.InvoicedQty}}</td>
+        <td>{{line.ShippedQty}}</td>
+        <td>{{line.DeliveryQty}}</td>
+        <td>{{line.LastInvoiceNo}}</td>
+        <td>{{line.TotalOrderAmount | currency}}</td>
+        <td>{{line.TotalAmountShipment | currency}}</td>
+        <td>{{line.TotalFreightCharge | currency}}</td>
+        <td>{{line.LatestETA}}</td>
+        <td>{{line.LatestDeliveryNoteDate}}</td>
+        <td>{{line.LatestWarehouseStatus}}</td>
+        <td>{{line.ScheduledFactoryShipDate}}</td>
+      </tr>
+      </tbody>
+    </table>    
+    
+</div>

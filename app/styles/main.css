@@ -1,0 +1,14 @@
+body {
+  padding: 0;
+}
+
+.container {
+    margin: 0;
+    width: 100vw;
+}
+
+.navbar {
+    border-radius: 0;
+    width: 100vw;
+    margin-bottom: 0;
+}
